@@ -1,0 +1,15 @@
+.idea
+.vscode
+*.csv
+*.whl
+*.xlsx
+env/
+data/
+__pycache__/
+Descriptions/
+_temp/
+IMAGES/
+.zip
+image_classifier/
+utils/
+logs/
