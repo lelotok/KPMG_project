@@ -2,7 +2,6 @@ import pandas as pd
 from deep_translator import GoogleTranslator
 
 #Opening file
-
 df = pd.read_csv('data/data_03.csv',sep="|",encoding='utf-8')
 
 #Looping through every rows of scaped texts
@@ -11,6 +10,7 @@ for index, rows in df.iterrows():
     text = "".join(df['fr_body'][index])
     to_translate = text
 
+    # To prevent the max characters limitations error to stop the script to finish looping throught the entire file
     if len(text) > 5000:
         to_translate = text[:4999]
         translated = GoogleTranslator(source='auto', target='english').translate(to_translate)
