@@ -10,21 +10,29 @@ for index, rows in df.iterrows():
     text = "".join(df['fr_body'][index])
     to_translate = text
 
-    # To prevent the max characters limitations error to stop the script to finish looping throught the entire file
-    if len(text) > 5000:
-        to_translate = text[:4999]
-        translated = GoogleTranslator(source='auto', target='english').translate(to_translate)
-    
-    else:
-        translated = GoogleTranslator(source='auto', target='english').translate(to_translate)
+    transl = []
 
-    # Saving each translations in .txt file
-    outpout = open('translations/translation_index_{}.txt'.format(index), 'w')
-    outpout.write(translated)
-    outpout.close()
+    try:
+        # To prevent the max characters limitations error to stop the script to finish looping throught the entire file
+        if len(text) > 5000:
+            to_translate = text[:4999]
+            translated = GoogleTranslator(source='auto', target='english').translate(to_translate)
+            transl.append(translated)
+        
+        else:
+            translated = GoogleTranslator(source='auto', target='english').translate(to_translate)
+            transl.append(translated)
+
+        # Saving each translations in .txt file
+        outpout = open('translations/translation_index_{}.txt'.format(index), 'w')
+        outpout.write(translated)
+        outpout.close()
+
+    except:
+        pass
 
 # Create a new column with the translated text in the dataframe
-df['transl_engl'] = translated
+df['transl_engl'] = transl
 
 # Save new dataframe in new .csv file
-df.to_csv('data/data_translated.csv', index=False )
+df.to_csv('data/data_translated_02.csv', index=False )
