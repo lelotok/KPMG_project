@@ -12,27 +12,28 @@ for index, rows in df.iterrows():
 
     transl = []
 
-    try:
+    #try:
         # To prevent the max characters limitations error to stop the script to finish looping throught the entire file
-        if len(text) > 5000:
-            to_translate = text[:4999]
-            translated = GoogleTranslator(source='auto', target='english').translate(to_translate)
-            transl.append(translated)
-        
-        else:
-            translated = GoogleTranslator(source='auto', target='english').translate(to_translate)
-            transl.append(translated)
+    if len(text) > 5000:
+        to_translate = text[:4999]
+        translated = GoogleTranslator(source='auto', target='english').translate(to_translate)
+        transl.append(translated)
+    
+    else:
+        translated = GoogleTranslator(source='auto', target='english').translate(to_translate)
+        transl.append(translated)
 
-        # Saving each translations in .txt file
-        outpout = open('translations/translation_index_{}.txt'.format(index), 'w')
-        outpout.write(translated)
-        outpout.close()
+    # Saving each translations in .txt file
+    outpout = open('translations/translation_index_{}.txt'.format(index), 'w')
+    outpout.write(translated)
+    outpout.close()
 
-    except:
-        pass
+    # except:
+    #     pass
 
 # Create a new column with the translated text in the dataframe
-df['transl_engl'] = transl
+transl_val = pd.Series(transl)
+df['transl_engl'] = transl_val
 
 # Save new dataframe in new .csv file
-df.to_csv('data/data_translated_02.csv', index=False )
+df.to_csv('data/data_translated_02.csv', index=False)
