@@ -12,8 +12,18 @@
 # Project description: 
 <img src="https://github.com/lelotok/KPMG_project/blob/Lena/assets/Text-Classification-using-Deep-Learning-1.png" align="right" width="600px"/>
 The tax department at KPMG needs to be up to date with the changes in the law in order to help their customers. They do that by checking all the articles that are published in the <a href="https://www.ejustice.just.fgov.be/cgi/welcome.pl"> National Gazette. </a> Going through every article is very time consuming and costly to our client. <br><br>
-That is why our team has automated this process. Using the NLP( Natural Processing Language) techniquues, our app reads the entire article and extracts the main key points. <br>
-<br clear="right"/> 
+That is why our team has automated this process. We scrape the articles from the website,pre-process them and then by using the NLP( Natural Processing Language) techniquues, our app reads the entire article and extracts the main key points.<br clear="right"/>
+ 
+ **Timeline assigned for the project:
+ 01/06/22 - 15/06/22**
+ 
+ # Steps of the project: 
+ *Click on the step to access the Jupyter Notebook with the code*
+ * <a href="https://github.com/lelotok/KPMG_project/blob/baki/01_scrape.ipynb"> Scrapping the data </a>
+ * <a href="https://github.com/lelotok/KPMG_project/blob/baki/02_summary.ipynb"> Extracting short summaries </a>
+ * <a href="https://github.com/lelotok/KPMG_project/blob/baki/03_keywords.ipynb"> Generating the keywords </a>
+ * <a href="https://github.com/lelotok/KPMG_project/blob/baki/04_tagging.ipynb"> Tagging the text </a>
+
  
  
 
