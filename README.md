@@ -10,7 +10,7 @@
 
  
 # Project description: 
-<img src="https://github.com/lelotok/KPMG_project/blob/Lena/assets/Text-Classification-using-Deep-Learning-1.png" align="right" width="600px"/>
+<img src="https://github.com/lelotok/KPMG_project/blob/Lena/assets/Text-Classification-using-Deep-Learning-1.png" align="right" width="550px"/>
 The tax department at KPMG needs to be up to date with the changes in the law in order to help their customers. They do that by checking all the articles that are published in the <a href="https://www.ejustice.just.fgov.be/cgi/welcome.pl"> National Gazette. </a> Going through every article is very time consuming and costly to our client. <br><br>
 That is why our team has automated this process. We scrape the articles from the website,pre-process them and then by using the NLP( Natural Processing Language) techniquues, our app reads the entire article and extracts the main key points.<br clear="right"/>
  
