@@ -1,0 +1,44 @@
+{% extends "base.html" %} 
+{% block content %}
+
+    <h2><i class="bi bi-file-earmark-text"></i> Today's Articles </h2>
+    
+
+    <table class="table table-sm table-light table-responsive">
+        <thead class="thead-inverse">
+            <tr>
+                <th style="width:100px">Date</th>
+                <th>Numac</th>
+                
+                <th>Summary</th>
+                <th>Tags</th>
+                
+                
+            </tr>
+            </thead>
+            <tbody>
+                {% for a in object_list %}
+                <tr>
+            <p>
+            
+                
+            <td>{{ a.date}}</td>
+            
+
+            <td>
+                <a class="btn btn-primary btn-sm w-100 py-0" style="text-align:left" href={{ a.link }}> {{ a.numac }}</a></td>
+
+            
+            <td>{{ a.nl_sum}}</td>
+            
+            
+            <td>{{ a.nl_tags}}</td>
+            
+
+                </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+
+    
+    {% endblock %}

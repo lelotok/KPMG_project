@@ -1,0 +1,40 @@
+{% extends "base.html" %} 
+{% block content %}
+
+    <h2><i class="bi bi-tags"></i> Tags </h2>
+    
+
+    <table class="table table-sm table-light table-responsive">
+        <thead class="thead-inverse">
+            <tr>
+                <th>Tag</th>
+                <th>Level</th>
+                
+            
+                
+            </tr>
+            </thead>
+            <tbody>
+                {% for a in object_list %}
+                <tr>
+            <p>
+            
+                
+            <td>{{ a.tag}}</td>
+            
+
+         
+
+            
+            <td>{{ a.level}}</td>
+            
+            
+            
+
+                </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+
+    
+    {% endblock %}

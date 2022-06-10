@@ -1,0 +1,23 @@
+td.red {
+    background-color: red;
+}
+td.orange {
+    background-color: orange;
+}
+td.green1 {
+    background-color: green;
+}
+td.limosa{
+    color: rgb(197, 45, 78);
+}
+td.idcard{
+    color: rgb(74, 158, 88);
+}
+
+i.limosa{
+    background-color: green;
+}
+
+tr.False{
+    color: rgb(224, 1, 124);
+}
