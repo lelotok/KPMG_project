@@ -12,7 +12,7 @@ for index, rows in df.iterrows():
 
     transl = []
 
-    #try:
+   
         # To prevent the max characters limitations error to stop the script to finish looping throught the entire file
     if len(text) > 5000:
         to_translate = text[:4999]
@@ -28,8 +28,7 @@ for index, rows in df.iterrows():
     outpout.write(translated)
     outpout.close()
 
-    # except:
-    #     pass
+    
 
 # Create a new column with the translated text in the dataframe
 transl_val = pd.Series(transl)
