@@ -19,9 +19,12 @@ That is why our team has automated this process. We scrape the articles from the
  
  # Steps of the project: 
  *Click on the step to access the Jupyter Notebook with the code*
- * <a href="https://github.com/lelotok/KPMG_project/blob/baki/01_scrape.ipynb"> Scrapping the data </a>
- * <a href="https://github.com/lelotok/KPMG_project/blob/baki/02_summary.ipynb"> Extracting short summaries </a>
- * <a href="https://github.com/lelotok/KPMG_project/blob/baki/03_keywords.ipynb"> Generating the keywords </a>
+ * <a href="https://github.com/lelotok/KPMG_project/blob/baki/01_scrape.ipynb"> Scrapping the data </a> <br>
+    * **Beautiful Soup** package for scraping the articles from the <a href="https://www.ejustice.just.fgov.be/cgi/welcome.pl"> National Gazette <a>
+ * <a href="https://github.com/lelotok/KPMG_project/blob/baki/02_summary.ipynb"> Extracting short summaries </a> <br>
+    * <a href="https://huggingface.co/ml6team/mbart-large-cc25-cnn-dailymail-nl-finetune"> A pre-trained NLP model </a> for summarization from **Hugging Face** developed by <a href="https://huggingface.co/ml6team"> ML6 Team </a>
+ * <a href="https://github.com/lelotok/KPMG_project/blob/baki/03_keywords.ipynb"> Generating the keywords </a> <br>
+    * <a href="https://spacy.io/models/nl#nl_core_news_lg"> A dutch NLP model </a> from **Spacy** for generating the relevant tax keywords
  * <a href="https://github.com/lelotok/KPMG_project/blob/baki/04_tagging.ipynb"> Tagging the text </a>
 
  
