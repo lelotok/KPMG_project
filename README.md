@@ -1,7 +1,7 @@
 <h1> <p align="center">Text classification project for KPMG at Becode Ghent  </p> </h1>
 <h3> <p align="center">This is a group project by BLY-TEAM as part of a collaboration between <a href="https://github.com/becodeorg"><strong>BeCode Ghent </strong></a> and <a href="https://www.linkedin.com/company/kpmg-belgium/?originalSubdomain=be"<strong>KPMG</strong></a>
  </p> </h3>
-<h3> <p align="center">BLY-team members: <a href="https://github.com/bakiguher">  Baki Guher, <a href="https://github.com/lelotok"> Lelo Manou Tokwaulu, <a href="https://github.com/Len-Fid"> Lena-Fidrmuc </a></p> </h3>
+<h3> <p align="center">BLY-team members: <a href="https://github.com/bakiguher">  Baki Guher, <a href="https://github.com/lelotok"> Lelo Manou Tokwaulu, <a href="https://github.com/Len-Fid"> Yelena Fidrmuc </a></p> </h3>
 
 <p align = "center">
   <img src="https://becode.org/app/uploads/2021/06/logo-becode.png" alt="Logo" width="200" height="200"/>
@@ -24,9 +24,14 @@ That is why our team has automated this process. We scrape the articles from the
  * <a href="https://github.com/lelotok/KPMG_project/blob/baki/02_summary.ipynb"> Extracting short summaries </a> <br>
     * <a href="https://huggingface.co/ml6team/mbart-large-cc25-cnn-dailymail-nl-finetune"> A pre-trained NLP model </a> for summarization from **Hugging Face** developed by <a href="https://huggingface.co/ml6team"> ML6 Team </a>
  * <a href="https://github.com/lelotok/KPMG_project/blob/baki/03_keywords.ipynb"> Generating the keywords </a> <br>
-    * <a href="https://spacy.io/models/nl#nl_core_news_lg"> A dutch NLP model </a> from **Spacy** for generating the relevant tax keywords
+    * <a href="https://spacy.io/models/nl#nl_core_news_lg"> A Dutch language NLP model </a> from **Spacy** ```and similarity()``` function for extracting the relevant tax keywords from the summaries of the articles
  * <a href="https://github.com/lelotok/KPMG_project/blob/baki/04_tagging.ipynb"> Tagging the text </a>
-
+    * Cross-checking the presence of the the keywoords in each summary. Returning the tags with the percentage of how much it corresponds to the assigned keywords
+ * <a href="https://github.com/lelotok/KPMG_project/blob/baki/05_forsql.ipynb"> Creating the database </a>
+    * **Pandas** library to put all the created data into a dataframe
+ * <a href="https://github.com/lelotok/KPMG_project/blob/baki/06_app.ipynb"> Building an app </a>
+    * Preparing the code for an app
+ 
  
  
 
