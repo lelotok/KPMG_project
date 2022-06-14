@@ -1,0 +1,68 @@
+{% extends "base.html" %} 
+{% block content %}
+
+
+
+
+<div class="row">
+
+
+
+</div>
+
+
+
+
+<div class="row">
+
+   
+  <div class="col-md-auto">
+
+  <div class="card text-white bg-light ms-3 mt-3 " >
+      
+      <div class="card-header text-primary text-uppercase " style="font-weight:bold"> LATEST NUMACS</div>
+      <div class="card-body">
+        <p class="card-text"> 
+        
+          <table class="table table-sm table-secondary table-responsive">
+          <thead class="thead-inverse">
+              <tr>
+                  <th style="width:100px">Date</th>
+                  <th>Numac</th>
+                  <th>Summary</th>
+                  <th>Tags</th>
+                
+              </tr>
+              </thead>
+              <tbody>
+                  {% for b in data.articles %}
+                  <tr>
+              
+              <td>{{ b.date}}</td>
+              <td><a class="btn btn-primary btn-sm w-100 py-0" style="text-align:left" href={{ b.link }}> {{ b.numac }}</a></td>
+              <td>{{ b.nl_sum}}</td>
+              <td>{{ b.nl_tags}}</td>
+              
+  
+                  </tr>
+                  {% endfor %}
+              </tbody>
+      </table>
+
+
+
+      </p>
+      
+      </div>
+      
+    </div>
+
+    
+  </div>
+
+  </div>
+  
+
+
+{% endblock %}
+

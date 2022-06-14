@@ -19,7 +19,7 @@ class Article(models.Model):
         return [(field.verbose_name, field.value_from_object(self)) for field in self.__class__._meta.fields]
 
     class Meta:
-        ordering = ['date' , 'numac']
+        ordering = ['-date' , 'numac']
 
 
 class Tag(models.Model):

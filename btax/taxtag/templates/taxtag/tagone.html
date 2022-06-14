@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="row">
+  <h2><i class="bi bi-tags"></i> Tag From Text</h2>
+  <div class="col-md-8">
+    <div class="form-group">
+      
+      <form method="post">
+        {% csrf_token %}
+
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Paste the Article in to textbox</label>
+          <textarea
+            class="form-control"
+            name="all_article"
+            rows="15"
+          >{{ text }}</textarea>
+        </div>
+
+        <button class="btn btn-primary">Tag & Summarize</button>
+        <a href="" class="btn btn-secondary">Cancel</a>
+      </form>
+
+      <p></p>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+
+      <h5> Summary :</h5>
+      <p>{{ summary}}     </p>
+
+      <h5> Tags :</h5>
+      <p>{{ tags}}     </p>
+
+  </div>
+
+
+
+</div>
+{% endblock %}
