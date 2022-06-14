@@ -5,6 +5,7 @@ import numpy as np
 import re
 
 
+# Required similarity of tags to be accepted as given tags related
 SIMILARITY=0.80
 
 tags='aanslagjaar covid arbeidsongeschiktheidsuitkeringen bedrijfsinkomsten bedrijfskosten bedrijfstoeslag bedrijfsvoorheffing belasting belastingverdragen belastingverhoging'\
@@ -15,9 +16,7 @@ tags='aanslagjaar covid arbeidsongeschiktheidsuitkeringen bedrijfsinkomsten bedr
      'invaliditeit verzekering'
 
 
-
-
-
+# PRETRAINED MODEL SETTINGS AND LOADING THE MODEL
 undisputed_best_model = transformers.MBartForConditionalGeneration.from_pretrained(
     "ml6team/mbart-large-cc25-cnn-dailymail-nl-finetune"
 )
@@ -31,9 +30,15 @@ summarization_pipeline.model.config.decoder_start_token_id = tokenizer.lang_code
     "nl_XX"
 ]
 
-#Creating the summary with pretrained model and saving to a csv file in case an error and appending to dataframe 
+
+
+
+#Creating the summary with pretrained model  
 
 def summarise(_nl_list:list):
+    '''
+    Function to summarize given list of text
+    '''
     counter=0
     summary=[]
     for text in _nl_list:
@@ -61,8 +66,10 @@ def summarise(_nl_list:list):
 
 nlp = spacy.load("nl_core_news_lg")
 
-
 def tagging(real_tags,summary_tags):
+    '''
+    Function to tag summaries 
+    '''
     summary_tag_list={}
 
     for _a in summary_tags:
@@ -78,8 +85,10 @@ def tagging(real_tags,summary_tags):
     return summary_tag_list
 
 
-
 def create_tags(summary:list):
+    '''
+    Function to create tags and calling summary function on them
+    '''
     real_tags=nlp(tags)
     keys=[]
     t=0
@@ -105,7 +114,10 @@ def create_tags(summary:list):
     return keys
 
 
-def clean_dataframe(data):
+def clean_dataframe(data:pd.DataFrame):
+    '''
+    Function to delete unrelated articles 
+    '''
 
     data['nl_tags']=data['nl_tags'].astype(str)
     data['nl_tags']=data["nl_tags"].str.strip('{}')

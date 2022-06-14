@@ -15,9 +15,14 @@
       {% for a in object_list %}
       <tr>
         <p>
-          <td>{{ a.tag}}</td>
+          <td>
 
-          <td>{{ a.level}}</td>
+            <a class="btn btn-primary btn-sm w-100 py-0" style="text-align:left" href={% url 'tagsearch' a.tag  %}> {{ a.tag}}</a>
+
+
+          </td>
+
+          <td>{{ a.level }}</td>
         </p>
       </tr>
 

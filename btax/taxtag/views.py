@@ -26,21 +26,27 @@ class TagListView(ListView):
 
 
 
+def tagsearch(request,tag):
+    articles=Article.objects.filter(nl_tags__icontains=tag)
 
+    context = {'data':{'articles': articles}}
+    return render(request, 'home.html', context)
+    
 
 def home(request):
-    today = datetime.datetime.today() +datetime.timedelta(days=10)
-    today=today.date()
-    
+    '''
+    Root page of the app
+    '''
     articles=Article.objects.all() 
-    
-    
     context = {'data':{'articles': articles}}
     return render(request, 'home.html', context)
 
 
 
 def tagone(request):
+    '''
+    Function to tag a given article text 
+    '''
     
     template_name = './taxtag/tagone.html'
     if request.method == 'POST':
@@ -49,11 +55,8 @@ def tagone(request):
         
         _q=request.POST.get("all_article")
         _q=clean(_q)
-        print(_q)
+        _q=_q.replace('\n',"")
         text.append(_q)
-        
-   
-
         summary=summarise(text)
         nltags=create_tags(summary)
         print(summary, nltags)
@@ -71,14 +74,15 @@ def tagone(request):
 
 
 def savearticles(request):
-    DATE='2022-06-13'
+    '''
+    Function to scrape given date and tag tax related articles and save to database
+    '''
+    DATE='2022-06-14'
 
     res = get_res(DATE)
     numacs=get_numac_numbers(res.text)
     numac_links=create_numac_links(numacs,DATE)
     nl_list=scrape_numac(numac_links)
-
-    
 
     summary=summarise(nl_list)
     nltags=create_tags(summary)
@@ -86,11 +90,9 @@ def savearticles(request):
     {'date':DATE,
     'numac':numacs,
     'link':numac_links,
-
     'nl_text':nl_list,
-      
-        'nl_sum': summary,
-     'nl_tags': nltags
+    'nl_sum': summary,
+    'nl_tags': nltags
     })
     
     

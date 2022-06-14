@@ -2,7 +2,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from taxtag.views import ArticleListView,TagListView,home,savearticles,tagone
+from taxtag.views import ArticleListView,TagListView,home,savearticles,tagone,tagsearch
 
 
 
@@ -14,6 +14,7 @@ urlpatterns = [
     path('', ArticleListView.as_view(), name='article_list'),
     path('save', savearticles, name='save_articles'),
     path('tagone',tagone, name='tagone'),
+    path('tags/<str:tag>/',tagsearch, name='tagsearch'),
 
     
 
