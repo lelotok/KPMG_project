@@ -24,7 +24,7 @@ That is why our team has automated this process. We scrape the articles from the
  * **<a href="https://github.com/lelotok/KPMG_project/blob/baki/02_summary.ipynb"> Extracting short summaries </a>**
     * <a href="https://huggingface.co/ml6team/mbart-large-cc25-cnn-dailymail-nl-finetune"> A pre-trained NLP model </a> for summarization from **Hugging Face** developed by <a href="https://huggingface.co/ml6team"> ML6 Team </a>
  * **<a href="https://github.com/lelotok/KPMG_project/blob/baki/03_keywords.ipynb"> Generating the keywords </a>**
-    * <a href="https://spacy.io/models/nl#nl_core_news_lg"> A Dutch language NLP model </a> from **Spacy** ```and similarity()``` function for extracting the relevant tax keywords from the summaries of the articles 
+    * <a href="https://spacy.io/models/nl#nl_core_news_lg"> A Dutch language NLP model </a> from **Spacy** and ```similarity()``` function for extracting the relevant tax keywords from the summaries of the articles 
  * **<a href="https://github.com/lelotok/KPMG_project/blob/baki/04_tagging.ipynb"> Tagging the text </a>**
     * Cross-checking the presence of the the keywoords in each summary. Returning the tags with the percentage of how much it corresponds to the assigned keywords 
  * **<a href="https://github.com/lelotok/KPMG_project/blob/baki/05_forsql.ipynb"> Creating the database </a>**
@@ -32,5 +32,7 @@ That is why our team has automated this process. We scrape the articles from the
  * **<a href="https://github.com/lelotok/KPMG_project/blob/baki/06_app.ipynb"> Building an app </a>**
     * Preparing the code for an app
  
- 
+ # Visuals 
+ Data source: **The National Gazette** 
+ <p align="center"><img src="https://github.com/lelotok/KPMG_project/blob/Lena/assets/National_Gazette.JPG"></a></p>
 
