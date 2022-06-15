@@ -19,7 +19,7 @@ That is why our team has automated this process. We scrape the articles from the
  01/06/22 - 15/06/22** <br> 
  
  # How to navigate through the project: 
- *Click on the hyperlink to access the Jupyter Notebook with the code*
+ *Click on the relevant step to access the Jupyter Notebook with the code*
  * **<a href="https://github.com/lelotok/KPMG_project/blob/main/jupyter/01_scrape.ipynb"> Scrapping the data </a>**   
     * **Beautiful Soup** package for scraping the articles from the <a href="https://www.ejustice.just.fgov.be/cgi/welcome.pl"> Belgian Official Gazette <a>
  * **<a href="https://github.com/lelotok/KPMG_project/blob/main/jupyter/02_summary.ipynb"> Extracting short summaries </a>**
