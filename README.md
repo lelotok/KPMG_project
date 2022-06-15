@@ -34,7 +34,7 @@ That is why our team has automated this process. We scrape the articles from the
     * Preparing the code for the app using **Django**
  
  
- ## <a href="https://github.com/lelotok/KPMG_project/blob/baki/btax/requirements.txt"> The requirements: </a>
+ ## <a href="https://github.com/lelotok/KPMG_project/blob/main/btax/requirements.txt"> The requirements: </a>
 * beautifulsoup4==4.11.1
 * Django==4.0.5
 * numpy==1.22.4
