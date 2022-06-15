@@ -13,12 +13,10 @@ from taxtag.summary import summarise,tagging,create_tags,clean_dataframe
 
 
 
-# Create your views here.
+
 class ArticleListView(ListView):
     model = Article
     ordering = ['date' , 'numac']
-
-
 
 class TagListView(ListView):
     model = Tag
@@ -27,6 +25,9 @@ class TagListView(ListView):
 
 
 def tagsearch(request,tag):
+    '''
+    Function to bring selected articles
+    '''
     articles=Article.objects.filter(nl_tags__icontains=tag)
 
     context = {'data':{'articles': articles}}
@@ -68,9 +69,7 @@ def tagone(request):
 
         return render(request, template_name, context)
     return render(request, template_name, {'form': 0})
-
- 
-    
+  
 
 
 def savearticles(request):

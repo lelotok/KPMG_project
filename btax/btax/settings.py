@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-1s^wxb0ulk4i&c@8s7n5m$iv_x^(3jw@0$h*buo%n1scoj86dc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['kpmgtag.herokuapp.com']
 
 
 # Application definition
@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_extensions',
     'taxtag',
 ]
 

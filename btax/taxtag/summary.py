@@ -17,10 +17,22 @@ tags='aanslagjaar covid arbeidsongeschiktheidsuitkeringen bedrijfsinkomsten bedr
 
 
 # PRETRAINED MODEL SETTINGS AND LOADING THE MODEL
-undisputed_best_model = transformers.MBartForConditionalGeneration.from_pretrained(
-    "ml6team/mbart-large-cc25-cnn-dailymail-nl-finetune"
-)
-tokenizer = transformers.MBartTokenizer.from_pretrained("facebook/mbart-large-cc25")
+
+undisputed_best_model = transformers.MBartForConditionalGeneration.from_pretrained("./model/")
+tokenizer = transformers.MBartTokenizer.from_pretrained("./model/")
+
+
+
+# undisputed_best_model = transformers.MBartForConditionalGeneration.from_pretrained(
+#     "ml6team/mbart-large-cc25-cnn-dailymail-nl-finetune")
+
+# tokenizer = transformers.MBartTokenizer.from_pretrained("facebook/mbart-large-cc25")
+
+# saveing the model first time downloaded
+#undisputed_best_model.save_pretrained('./model/')
+#tokenizer.save_pretrained('./model/')
+
+
 summarization_pipeline = transformers.pipeline(
     task="summarization",
     model=undisputed_best_model,
