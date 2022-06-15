@@ -1,7 +1,7 @@
 <h1> <p align="center">Text classification project for KPMG at Becode Ghent  </p> </h1>
-<h3> <p align="center">This is a group project by BLY-TEAM as part of a collaboration between <a href="https://github.com/becodeorg"><strong>BeCode Ghent </strong></a> and <a href="https://www.linkedin.com/company/kpmg-belgium/?originalSubdomain=be"<strong>KPMG</strong></a>
+<h3> <p align="center">This is a group project by team Tagsation as part of a collaboration between <a href="https://github.com/becodeorg"><strong>BeCode Ghent </strong></a> and <a href="https://www.linkedin.com/company/kpmg-belgium/?originalSubdomain=be"<strong>KPMG</strong></a>
  </p> </h3>
-<h3> <p align="center">BLY-team members: <a href="https://github.com/bakiguher">  Baki Guher, <a href="https://github.com/lelotok"> Lelo Manou Tokwaulu, <a href="https://github.com/Len-Fid"> Yelena Fidrmuc </a></p> </h3>
+<h3> <p align="center">Tagsation team members: <a href="https://github.com/bakiguher">  Baki Guher, <a href="https://github.com/lelotok"> Lelo Manou Tokwaulu, <a href="https://github.com/Len-Fid"> Yelena Fidrmuc </a></p> </h3>
 
 <p align = "center">
   <img src="https://becode.org/app/uploads/2021/06/logo-becode.png" alt="Logo" width="200" height="200"/>
@@ -11,13 +11,14 @@
  
 # Project description: 
 <img src="https://github.com/lelotok/KPMG_project/blob/Lena/assets/Text-Classification-using-Deep-Learning-1.png" align="right" width="550px"/>
-The tax department at KPMG needs to be up to date with the changes in the law in order to help their customers. They do that by checking all the articles that are published in the <a href="https://www.ejustice.just.fgov.be/cgi/welcome.pl"> Belgian Official Gazette. </a> Going through every article is very time consuming and costly to our client. <br><br>
-That is why our team has automated this process. We scrape the articles from the website,pre-process them and then by using the NLP( Natural Processing Language) techniquues, our app reads the entire article and extracts the main key points.<br clear="right"/>
+<h3> The tax department at KPMG needs to be up to date with the changes in the law in order to help their customers. They do that by checking all the articles that are published in the <a href="https://www.ejustice.just.fgov.be/cgi/welcome.pl"> Belgian Official Gazette. </a> Going through every article is very time consuming and costly to our client. <br><br>
+That is why our team has automated this process. We scrape the articles from the website,pre-process them and then by using the NLP( Natural Processing Language) techniques, our app reads the entire article and extracts the main key points.</h3> <br clear="right"/>
  
- **Timeline assigned for the project:
- 01/06/22 - 15/06/22**
  
- # Steps of the project: 
+**Timeline assigned for the project:
+ 01/06/22 - 15/06/22** <br> 
+ 
+ # How to navigate through the project: 
  *Click on the step to access the Jupyter Notebook with the code*
  * **<a href="https://github.com/lelotok/KPMG_project/blob/baki/01_scrape.ipynb"> Scrapping the data </a>**   
     * **Beautiful Soup** package for scraping the articles from the <a href="https://www.ejustice.just.fgov.be/cgi/welcome.pl"> Belgian Official Gazette <a>
@@ -30,13 +31,47 @@ That is why our team has automated this process. We scrape the articles from the
  * **<a href="https://github.com/lelotok/KPMG_project/blob/baki/05_forsql.ipynb"> Creating the database </a>**
     * **Pandas** library to put all the created data into a dataframe
  * **<a href="https://github.com/lelotok/KPMG_project/blob/baki/06_app.ipynb"> Building an app </a>**
-    * Preparing the code for an app
+    * Preparing the code for the app using **Django**
+ 
+ 
+ ## <a href="https://github.com/lelotok/KPMG_project/blob/baki/btax/requirements.txt"> The requirements: </a>
+* beautifulsoup4==4.11.1
+* Django==4.0.5
+* numpy==1.22.4
+* pandas==1.4.2
+* requests==2.27.1
+* spacy==3.3.0
+* transformers==4.17.0
+* Unidecode==1.3.4
+* <a href="https://github.com/explosion/spacy-models/releases/download/nl_core_news_lg-3.3.0/nl_core_news_lg-3.3.0-py3-none-any.whl">nl-core-news-lg </a>
+* torch==1.11.0
+* sentence-transformers==2.2.0
+* sentencepiece==0.1.96
+ 
+ # Contributors: 
+ <a href="https://github.com/bakiguher">  Baki Guher </a> (Developer): 
+- Developed the scrapping script
+- Used NLP techniques to summarize the text and extract the tags
+- Developed the App
+
+<a href="https://github.com/Len-Fid"> Yelena Fidrmuc </a> (Functional analyst):
+- Worked as a bridge between the product manager and the developer
+- Helped to facilate the workflow researched about the relevant NLP techniques 
+- Analysed the scope and help to define a strategy to build the solution
+- Wrote the README file
+
+ <a href="https://github.com/lelotok"> Lelo Tokwaulu </a> (Product manager):
+- Made sure the solution is build according the scope of the project
+- Helped the team to keep the communication flowing
+- Wrote a script for the translation
+- Designed the presentation slides
  
  # Visuals 
 ###  *Data source: Belgian Official Gazette/Belgische Staatblad/Moniteur Belge*
  <p align="center"><img src="https://github.com/lelotok/KPMG_project/blob/Lena/assets/National_Gazette.JPG"></a><p>
  
 ### *Our keywords:*
+ The tax keywords we extracted from the data provided by the client
  <p align="center"><img src="https://github.com/lelotok/KPMG_project/blob/Lena/assets/keywords.png" width="700" height="400"></a></p>
 
 ### *The app: Newly scrapped data in a table with tags*
