@@ -27,7 +27,7 @@ That is why our team has automated this process. We scrape the articles from the
  * **<a href="https://github.com/lelotok/KPMG_project/blob/main/jupyter/03_keywords.ipynb"> Generating the keywords </a>**
     * <a href="https://spacy.io/models/nl#nl_core_news_lg"> A Dutch language NLP model </a> from **Spacy** and ```similarity()``` function for extracting the relevant tax keywords from the summaries of the articles 
  * **<a href="https://github.com/lelotok/KPMG_project/blob/main/jupyter/04_tagging.ipynb"> Tagging the text </a>**
-    * Cross-checking the presence of the the keywoords in each summary. Returning the tags with the percentage of how much it corresponds to the assigned keywords 
+    * Cross-checking the presence of the the keywoords in each summary. Returning the tags with the percentage of how much it corresponds to the assigned tax keywords 
  * **<a href="https://github.com/lelotok/KPMG_project/blob/main/jupyter/05_forsql.ipynb"> Creating the database </a>**
     * **Pandas** library to put all the created data into a dataframe
  * **<a href="https://github.com/lelotok/KPMG_project/blob/main/jupyter/06_app.ipynb"> Building an app </a>**
