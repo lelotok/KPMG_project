@@ -11,7 +11,7 @@
  
 # Project description: 
 <img src="https://github.com/lelotok/KPMG_project/blob/Lena/assets/Text-Classification-using-Deep-Learning-1.png" align="right" width="550px"/>
-The tax department at KPMG needs to be up to date with the changes in the law in order to help their customers. They do that by checking all the articles that are published in the <a href="https://www.ejustice.just.fgov.be/cgi/welcome.pl"> National Gazette. </a> Going through every article is very time consuming and costly to our client. <br><br>
+The tax department at KPMG needs to be up to date with the changes in the law in order to help their customers. They do that by checking all the articles that are published in the <a href="https://www.ejustice.just.fgov.be/cgi/welcome.pl"> Belgian Official Gazette. </a> Going through every article is very time consuming and costly to our client. <br><br>
 That is why our team has automated this process. We scrape the articles from the website,pre-process them and then by using the NLP( Natural Processing Language) techniquues, our app reads the entire article and extracts the main key points.<br clear="right"/>
  
  **Timeline assigned for the project:
@@ -20,7 +20,7 @@ That is why our team has automated this process. We scrape the articles from the
  # Steps of the project: 
  *Click on the step to access the Jupyter Notebook with the code*
  * **<a href="https://github.com/lelotok/KPMG_project/blob/baki/01_scrape.ipynb"> Scrapping the data </a>**   
-    * **Beautiful Soup** package for scraping the articles from the <a href="https://www.ejustice.just.fgov.be/cgi/welcome.pl"> National Gazette <a>
+    * **Beautiful Soup** package for scraping the articles from the <a href="https://www.ejustice.just.fgov.be/cgi/welcome.pl"> Belgian Official Gazette <a>
  * **<a href="https://github.com/lelotok/KPMG_project/blob/baki/02_summary.ipynb"> Extracting short summaries </a>**
     * <a href="https://huggingface.co/ml6team/mbart-large-cc25-cnn-dailymail-nl-finetune"> A pre-trained NLP model </a> for summarization from **Hugging Face** developed by <a href="https://huggingface.co/ml6team"> ML6 Team </a>
  * **<a href="https://github.com/lelotok/KPMG_project/blob/baki/03_keywords.ipynb"> Generating the keywords </a>**
@@ -33,6 +33,21 @@ That is why our team has automated this process. We scrape the articles from the
     * Preparing the code for an app
  
  # Visuals 
- Data source: **The National Gazette** 
- <p align="center"><img src="https://github.com/lelotok/KPMG_project/blob/Lena/assets/National_Gazette.JPG"></a></p>
+###  *Data source: Belgian Official Gazette/Belgische Staatblad/Moniteur Belge*
+ <p align="center"><img src="https://github.com/lelotok/KPMG_project/blob/Lena/assets/National_Gazette.JPG"></a><p>
+ 
+### *Our keywords:*
+ <p align="center"><img src="https://github.com/lelotok/KPMG_project/blob/Lena/assets/keywords.png" width="700" height="400"></a></p>
+
+### *The app: Newly scrapped data in a table with tags*
+ <p align="center"><img src="https://github.com/lelotok/KPMG_project/blob/Lena/assets/tablewithtags.png"></a></p>
+ 
+### *The app: Tag extractor from the pasted text*
+ <p align="center"><img src="https://github.com/lelotok/KPMG_project/blob/Lena/assets/tagfromtext.png"></a></p>
+ 
+ 
+
+
+
+ 
 
