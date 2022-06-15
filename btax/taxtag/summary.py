@@ -21,7 +21,7 @@ tags='aanslagjaar covid arbeidsongeschiktheidsuitkeringen bedrijfsinkomsten bedr
 undisputed_best_model = transformers.MBartForConditionalGeneration.from_pretrained("./model/")
 tokenizer = transformers.MBartTokenizer.from_pretrained("./model/")
 
-
+undisputed_best_model.to('cuda')
 
 # undisputed_best_model = transformers.MBartForConditionalGeneration.from_pretrained(
 #     "ml6team/mbart-large-cc25-cnn-dailymail-nl-finetune")
