@@ -88,8 +88,10 @@ def scrape_numac(_numac_links:list):
             sup.unwrap()
     
         
-        text=soup.text
+        text = soup.get_text(separator=" ").strip()
         text=text.replace('\n',"")
+        print(text)
+
         lst=text.split('Numac :')[1].split(text.split('Numac :')[2])
     
 

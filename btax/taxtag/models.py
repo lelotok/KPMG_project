@@ -14,7 +14,7 @@ class Article(models.Model):
 
 
     def __str__(self):
-        return self.numac
+        return f'{self.numac}  -  {self.date}'
     def get_fields(self):
         return [(field.verbose_name, field.value_from_object(self)) for field in self.__class__._meta.fields]
 

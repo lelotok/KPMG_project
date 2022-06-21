@@ -3,17 +3,17 @@ import spacy
 import pandas as pd
 import numpy as np
 import re
-
+import torch
 
 # Required similarity of tags to be accepted as given tags related
 SIMILARITY=0.80
 
-tags='aanslagjaar covid arbeidsongeschiktheidsuitkeringen bedrijfsinkomsten bedrijfskosten bedrijfstoeslag bedrijfsvoorheffing belasting belastingverdragen belastingverhoging'\
+tags='aanslagjaar covid arbeidsovereenkomst arbeidsongeschiktheidsuitkeringen bedrijfsinkomsten bedrijfskosten bedrijfstoeslag bedrijfsvoorheffing belasting belastingverdragen belastingverhoging'\
      'belastingvermindering belastingvoet belastingvoordeel belastingvrije beroepsinkomsten beroepskosten bezoldiging btw derdebetalersregeling dienstverplichtingen erfbelasting'\
      'financieringskosten heffing inkomsten inkomstenderving investeringsaftrek kapitaalaflossingen kapitaalvermindering kostenvermindering omzetbelasting personenbelasting'\
      'prestatievergoeding rechtspersonenbelasting registratierechten schenkbelasting socialezekerheidsbijdragen solidariteitsbijdrage uitbetalingsinstelling vennootschapsbelasting'\
      'verminderingen vervangingsinkomsten voorafbetalingen voorbelasting voorheffing vrijstellingsregeling waardevermindering werkgeversbijdrage werkingskosten zekerheidsbijdragen'\
-     'invaliditeit verzekering'
+     'invaliditeit verzekering werkloosheid'
 
 
 # PRETRAINED MODEL SETTINGS AND LOADING THE MODEL
@@ -21,7 +21,11 @@ tags='aanslagjaar covid arbeidsongeschiktheidsuitkeringen bedrijfsinkomsten bedr
 undisputed_best_model = transformers.MBartForConditionalGeneration.from_pretrained("./model/")
 tokenizer = transformers.MBartTokenizer.from_pretrained("./model/")
 
+device1 = 0 if torch.cuda.is_available() else 1
+
+
 #undisputed_best_model.to('cuda')
+
 
 # undisputed_best_model = transformers.MBartForConditionalGeneration.from_pretrained(
 #     "ml6team/mbart-large-cc25-cnn-dailymail-nl-finetune")
@@ -37,10 +41,13 @@ summarization_pipeline = transformers.pipeline(
     task="summarization",
     model=undisputed_best_model,
     tokenizer=tokenizer,
+    device=0
 )
 summarization_pipeline.model.config.decoder_start_token_id = tokenizer.lang_code_to_id[
     "nl_XX"
 ]
+
+
 
 
 
@@ -90,6 +97,7 @@ def tagging(real_tags,summary_tags):
             q=round(token.similarity(_a),3)
         
             if q > SIMILARITY:
+                print(token," / " , _a ," / ",q)
                 
                 #add token to dict
                 summary_tag_list[token]=q

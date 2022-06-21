@@ -55,6 +55,7 @@ def tagone(request):
         text=[]
         
         _q=request.POST.get("all_article")
+        rettext=_q
         _q=clean(_q)
         _q=_q.replace('\n',"")
         text.append(_q)
@@ -63,8 +64,8 @@ def tagone(request):
         print(summary, nltags)
         
         context=summary[0]
-
-        context = {'summary': summary[0],'tags':nltags[0],'text':text[0]}
+        
+        context = {'summary': summary[0],'tags':nltags[0],'text':rettext}
 
 
         return render(request, template_name, context)
@@ -76,7 +77,7 @@ def savearticles(request):
     '''
     Function to scrape given date and tag tax related articles and save to database
     '''
-    DATE='2022-06-14'
+    DATE='2022-06-15'
 
     res = get_res(DATE)
     numacs=get_numac_numbers(res.text)
